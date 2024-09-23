@@ -1,0 +1,70 @@
+什麼是Pandas?
+概念類似試算表的資料分析套件
+
+基礎學習項目
+1.安裝Pandas套件
+2.認識單維度的資料Series
+3.認識雙維度的資料DataFrame
+
+準備環境
+pip 套件管理工具
+安裝Pandas套件
+pip install Pandas
+
+Series
+單為維度資料
+就像是一個列表、或是試算表中直向的欄位資料
+
+建立Series
+# 載入Pandas模組
+imports pandas as pd
+#以列表資料為底，建立Series
+pd.Series(列表)
+data=pd.Series(列表)
+data.max() # 找到最大值
+data.median() # 計算中位數
+data=data*2 # 放大兩倍
+
+DataFrame
+雙維度的資料
+就像一個表格，有欄位核列的概念
+# 載入Pandas模組
+imports pandas as pd 
+# 以字典資料為底，建立DataFrame
+pd.DataFrame(字典)
+
+取得特定欄位(直向)
+
+imports pandas as pd
+data=pd.DataFrame(字典)
+data["欄位名稱"]
+
+取得特定欄位(橫向)
+imports pandas as pd 
+data=pd.DataFrame(字典)
+data.iloc[列編號] # 列編號按順序由0開始累加
+
+# 載入Pandas模組
+imports pandas as pd 
+# 建立 Series 操作
+data=pd.Series([20, 10, 15])
+# 基本 Series 操作
+print("最大值", data.max())
+print("計算中位數", data.median())
+data=data*2
+print(data)
+data=data==20
+print(data)
+
+# 建立 DataFrame
+data=pd.DataFrame(
+    "name":["Amy", "John", "Bob"],
+    "salary":[30000, 50000, 40000]
+)
+# 基本 DataFrame 操作
+print(data)
+#取得特定的欄位
+print(data)
+print("================")
+print(data["salary"])
+print(data.iloc[0]) # 印出第一列

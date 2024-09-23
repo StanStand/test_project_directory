@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------------------
+學習清單
+
+1. 資料串接與讀寫
+MSSQL、MySQL 資料庫連接與操作（使用 pyodbc 或 mysql-connector-python）
+Excel、Word、CSV、TXT 檔案的讀取與寫入（使用 pandas, python-docx）
+2. 資料處理
+JSON 解析與文字格式處理（使用 json 模組或 Pandas）
+Pandas 基本功能（Series, DataFrame, Selection, Grouping）
+Pandas 與 Excel 的整合
+自動化樞紐分析表
+跨表格與跨工作簿的資料處理（Pandas Append 水平合併）
+3. 資料視覺化
+使用 Matplotlib、Seaborn 和 Plotly 進行靜態與互動式圖表繪製
+使用 Python 進行資料從 SQL 撈取到聚合再視覺化的完整流程
+4. 進階課程選項
+A. 資料清理與處理
+處理缺失值、異常值（Missing Data）
+One-hot encoding
+特徵縮放（Feature Scaling）
+B. 自動化與排程
+RPA（機器人流程自動化）
+排程 Python 程式碼的執行
+用 Python 發送 Line 訊息
+C. 文字探勘
+文本預處理：分詞、詞性標注、去除停用詞
+文本向量化：Bag of Words、TF-IDF、Word2Vec
+5. OLLAMA: API (LLM)
+練習自動化流程並使用 API 進行 NPS & Myasus app 的數據分類與關鍵字分析
+6. 統一環境
+安裝並掌握 Python v3.12.3
+-------------------------------------------------------------------------------------------
