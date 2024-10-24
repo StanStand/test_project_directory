@@ -1,3 +1,4 @@
+import pymysql.cursors
 import streamlit as st
 import numpy as np
 
@@ -54,3 +55,38 @@ st.divider()
 
 #添加中文註解
 st.write("希望以上這些有助於建立令人印象深刻的Streamlit網頁!")
+
+#############################################################################################################################################################
+
+# 連接 MySQL 操作並且實作
+import streamlit as st
+import pandas as pd
+import pymysql
+
+mysql_conn = pymysql.connect (host= '10.96.196.36', user='NPSPO_User', password='Gaming@NPD', database='stan01', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor) # 連接MySQL
+
+def main():
+    st.title("Streamlit連接MySQ的L範例")
+
+    try:
+        with mysql_conn.cursor() as cursor:
+            sql = "SELECT * FROM NPS_2;"
+            cursor.execute(sql)
+
+            data = cursor.fetchall()
+
+            if data:
+                df = pd.DataFrame(data)
+                st.dataframe(df)
+                st.write("MySQL資料庫中的資料:")
+            else:
+                st.write("沒有查詢到任何資料.")
+
+    except Exception as e:
+        st.error (f"連接資料庫時出錯:{str(e)}")
+
+
+if __name__ == "__main__":
+    main()
+
+
